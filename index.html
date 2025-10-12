@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* ====== GENERAL ====== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #abb1c3;
+      color: #281313;
+    }
+
+    /* ====== HEADER ====== */
+    header {
+      background: #0a3345;
+      color: white;
+      padding: 20px 10px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: flex-start; /* logo left */
+    }
+
+    /* AASTU LOGO */
+    header img.logo {
+      width: 240px;         /* 4× bigger */
+      height: 240px;        /* square for circle */
+      border-radius: 50%;   /* circular */
+      object-fit: cover;    /* fill circle */
+      border: 4px solid #12f91d;
+      box-shadow: 0 4px 10px rgba(78, 74, 74, 0.3);
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .header-text p {
+      margin: 5px 0 0;
+      font-size: 16px;
+    }
+
+    nav {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: rgb(238, 246, 9);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    section {
+      display: none;
+      margin-bottom: 40px;
+      animation: fadeIn cubic-bezier(1, 0, 0, 1) ease;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    section h2 {
+      color: #3100ad;
+      border-bottom: 4px solid #004aad;
+      padding-bottom: 5px;
+    }
+
+    /* ====== ABOUT SECTION ====== */
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .about-container img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;  /* circular */
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      border: 4px solid #d6374e;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .course, .research-item {
+      background: #d4caca;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background: #004aad;
+      color: rgb(168, 155, 155);
+      text-align: center;
+      padding: 15px 10px;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <!-- ====== HEADER ====== -->
+  <header>
+    <div class="header-container">
+      <!-- AASTU LOGO (circular) -->
+      <img src="images/seyoum.jpg" alt="AASTU Logo" class="logo">
+      <div class="header-text">
+        <h1>Seyoum Getachew Nigussie</h1>
+        <p><strong>Department of Electromechanical Engineering </p>
+      </div>
+    </div>
+    <nav>
+      <a onclick="showSection('about')">About</a>
+      <a onclick="showSection('courses')">Courses</a>
+      <a onclick="showSection('research')">Research Interest</a>
+      <a onclick="showSection('projects')">Projects</a>
+      <a onclick="showSection('publication')">Publications</a>
+      <a onclick="showSection('certificates')">Certificates</a>
+      <a onclick="showSection('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ====== ABOUT ====== -->
+    <section id="about" class="active">
+      <h2>Biblography</h2>
+      <div class="about-container">
+        <!-- Personal photo circular -->
+        <img src="images/aastu-logo.png" alt="Seyoum Nigussie">
+        <div class="about-text">
+          <p><strong>Seyoum Nigussie</strong>, Lecturer in the Department of Electromechanical Engineering at Addis Ababa Science and Technology University.</p>
+          <p>Over 4 years of teaching and research experience focused on improving engineering education through hands-on learning. My work combines analytical and experimental methods to solve real-world energy and design challenges.</p>
+          <p><strong>Education:</strong></p>
+          <ul>
+            <li>M.Sc. in Thermal Engineering, Adama Science and Technology University (2018-2020). </li>
+            <li>B.Sc. in Mechanical Engineering, Adama Science and Technology University (2013-2018).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== COURSES ====== -->
+  <section id="courses">
+  <h2>Courses Taught</h2>
+
+  <!-- === Engineering Thermodynamics === -->
+  <div class="course">
+    <h3>Engineering Thermodynamics</h3>
+    <ul>
+      <li>Credits: 3</li>
+      <li>Semester: 2025/1</li>
+      <li>Course Learning Outcomes:
+        <ul>
+          <li>Apply Zeroth law of thermodynamics to formulate temperature scales and relationship between internal energy, heat and work.</li>
+          <li>Apply the first law of thermodynamics to calculate property changes in systems.</li>
+          <li>Explain the basics of pure substances and the second law of thermodynamics.</li>
+          <li>Explain the basic concept of entropy and cycles (gas, vapor, refrigeration).</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Upload to Google Form -->
+    <div class="upload-link">
+      <h4>📤 <strong>Submit Assignment</strong></h4>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSexvpu7PySGOuDksCMq2Dtfw-QxPM5rcFzdDmTq9mJdh5JKPw/viewform?usp=header" target="_blank">
+        <button style="background:hsl(288, 79%, 16%); color:white; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">
+          Upload here
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- === Fluid Mechanics === -->
+  <div class="course">
+    <h3>Fluid Mechanics</h3>
+    <ul>
+      <li>Credits: 3</li>
+      <li>Semester: 2025/1</li>
+      <li>CLOs:
+        <ul>
+          <li>Explain fluid properties and flow characteristics.</li>
+          <li>Apply Bernoulli’s equation and conservation laws.</li>
+          <li>Apply integral and differential relations for control volume analysis.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Upload to Google Form -->
+    <div class="upload-link">
+      <h4>📤 <strong>Submit Assignment</strong></h4>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdezmHPopc40puE1PrafX0oZYwlhM0o5x4Bf8PRhDaU9OquhA/viewform?usp=header" target="_blank">
+        <button style="background:#380659; color:white; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">
+          Upload here
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- ====== RESEARCH ====== -->
+    <section id="research">
+      <h2>Research Interest</h2>
+
+      <div class="research-item">
+        <h3>1. Thermofluid Systems Optimization</h3>
+        <p>Modeling and experimental study of efficient energy conversion in thermofluid systems, including solar collectors and heat exchangers.</p>
+      </div>
+
+      <div class="research-item">
+        <h3>2. Renewable and Sustainable Energy</h3>
+        <p>Design and analysis of hybrid renewable systems (solar–wind) for off-grid applications in Ethiopia and Sub-Saharan Africa.</p>
+      </div>
+
+      <div class="research-item">
+        <h3>3. Refrigeration and Airconditioning</h3>
+        <p>Numerical and experimental studies on the effect of phase change material.</p>
+      </div>
+      <div class="research-item">
+        <h3>4. Water desalination system</h3>
+        <p>Numerical and experimental studies on the performance od desalination technologies.</p>
+      </div>
+      <div class="research-item">
+        <h3>5. Atmospheric water harvesting system</h3>
+        <p>Numerical and experimental investigation of the perormance of technologies based on the atmospheric condition.</p>
+      </div>
+    </section>
+    <!-- ====== PROJECTS ====== -->
+    <section id="projects">
+      <h2>Research and Technology Transfer projects</h2>
+      <ul>
+    <li>
+      Design and manufacturing of solar thermal cooker.
+    </li>
+    <li>
+      Design and manufacturing of water desalination system.
+    </li>
+    <li>
+      Design and fabrication of vertical farming model for urban agriculture.
+    </li>
+  </ul>
+    </section>
+<!-- ====== PUBLICATIONS ====== -->
+    <section id="publication">
+      <h2>Publications</h2>
+      <ul>
+    <li>
+      Nigussie, S., et al. <em>"Experimental investigation of phase change material integrated vapor compression refrigeration system"</em>, International Journal of Applied Thermal Engineering, 2025. 
+      <a href="https://doi.org/example1" target="_blank">[https://doi.org/10.1016/j.applthermaleng.2025.126118]</a>
+    </li>
+    <li>
+      Nigussie, S., et al. <em>"Performance Investigation of Ethiopian Local Drinking Alcohol Distillation System Using Solar Dish Concentrator"</em>, Journal of Energy, 2022. 
+      <a href="https://doi.org/example2" target="_blank">[https://doi.org/10.1155/2022/8478276]</a>
+    </li>
+    <li>
+      Nigussie, S., et al. <em>"Design and thermal performance investigation of solar-powered water purifying system for Dire Dawa Rural area"</em>, Journal Solar Energy Advances, 2025. 
+      <a href="https://doi.org/example3" target="_blank">[https://doi.org/10.1016/j.seja.2025.100088]</a>
+    </li>
+    <!-- Add more papers as needed -->
+  </ul>
+
+  <p>
+    📚 Google Scholar: 
+    <a href="https://scholar.google.com/citations?authuser=1&user=HXb3taMAAAAJ" target="_blank">
+      https://scholar.google.com/citations?authuser=1&user=HXb3taMAAAAJ
+    </a>
+  </p>
+
+  <p>
+    🆔 ORCID ID: 
+    <a href="https://orcid.org/my-orcid?orcid=0009-0002-4659-2403" target="_blank">
+     https://orcid.org/my-orcid?orcid=0009-0002-4659-2403
+    </a>
+  </p>
+    </section>
+     <!-- ====== CERTIFICATES ====== -->
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <ul>
+    <li>
+      International conference on energy and application (Djibouti University).
+    </li>
+    <li>
+      Certified in externship training program.
+    </li>
+    <li>
+      Certified in higher diploma program (HDP).
+    </li>
+    <li>
+      Certified in staff development committee.
+    </li>
+    <li>
+      Certified in quality assurance and kaizen committee.
+    </li>
+    <li>
+      Certified in community services projects.
+    </li>
+     <li>
+      Certified in master class for online teaching.
+    </li>
+    <li>
+      Certified in research and technology transfer project work.
+    </li>
+    <li>
+      Certified in technical committee works.
+    </li>
+  </ul>
+    </section>
+    <!-- ====== CONTACT ====== -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>If you want to get in touch, please fill out the form below:</p>
+  <canvas id="contact-bg" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:-1;"></canvas>
+
+  <div class="contact-container gradient-glow">
+    <form class="contact-form" action="https://formspree.io/f/xdkwwqly" method="POST" id="contactForm">
+      <div class="floating-group">
+        <input type="text" id="contact-name" name="name" required>
+        <label for="contact-name">Full Name</label>
+      </div>
+
+      <div class="floating-group">
+        <input type="email" id="contact-email" name="_replyto" required>
+        <label for="contact-email">Email</label>
+      </div>
+
+      <div class="floating-group">
+        <input type="text" id="contact-subject" name="subject" required>
+        <label for="contact-subject">Subject</label>
+      </div>
+
+      <div class="floating-group">
+        <textarea id="contact-message" name="message" rows="3" required></textarea>
+        <label for="contact-message">Message</label>
+      </div>
+
+      <button type="submit" class="send-btn">📨 Send Message</button>
+    </form>
+
+    <div class="contact-info gradient-glow">
+      <p class="contact-item"><span class="icon">📧</span> <strong>Email:</strong> 
+        <a href="mailto:seyoum.getachew@aastu.edu.et">seyoum.getachew@aastu.edu.et</a>
+      </p>
+      <p class="contact-item"><span class="icon">🏢</span> <strong>Office:</strong> Room 401</p>
+      <p class="contact-item"><span class="icon">📞</span> <strong>Phone:</strong> +251933235303</p>
+      <p class="contact-item"><span class="icon">⏰</span> <strong>Office Hours:</strong> Mon – Fri, 11:00 AM – 4:00 PM</p>
+    </div>
+  </div>
+
+  <style>
+    /* ===== FORM STYLING ===== */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px; /* Increased space between fields */
+      position: relative;
+    }
+
+    .floating-group input,
+    .floating-group textarea {
+      width: 100%;
+      padding: 12px 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .floating-group label {
+      font-size: 14px;
+    }
+
+    .contact-form .send-btn {
+      align-self: flex-end; /* Float the button to the right */
+      padding: 12px 25px;
+      background-color: #81ac09;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form .send-btn:hover {
+      background-color: #c3a1c6;
+    }
+  </style>
+
+  <script>
+    // ===== Send to Formspree =====
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        showToast();
+        contactForm.reset();
+      } else {
+        alert("⚠️ There was a problem sending your message. Try again later.");
+      }
+    });
+
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4000);
+    }
+
+    // ===== Particle Wave Background =====
+    const canvas = document.getElementById('contact-bg');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    const waveAmplitude = 15;
+    const waveFrequency = 0.01;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    class Particle {
+      constructor() {
+        this.baseX = Math.random() * canvas.width;
+        this.baseY = canvas.height - Math.random() * 100;
+        this.x = this.baseX;
+        this.y = this.baseY;
+        this.radius = Math.random() * 2 + 1;
+        this.speedY = Math.random() * 0.2 + 0.05;
+      }
+      update(time) {
+        this.y -= this.speedY;
+        this.x = this.baseX + Math.sin(time * waveFrequency + this.baseX * 0.01) * waveAmplitude;
+        if (this.y < 0) this.y = canvas.height;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(0,229,255,0.6)';
+        ctx.fill();
+      }
+    }
+
+    function initParticles(num = 120) { particles = []; for (let i = 0; i < num; i++) particles.push(new Particle()); }
+    function animateParticles(time = 0) {
+      ctx.clearRect(1, 1, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(time); p.draw(); });
+      requestAnimationFrame(animateParticles);
+    }
+
+    window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
+    resizeCanvas(); initParticles(); animateParticles();
+  </script>
+</section>
+
+
+  </main>
+
+  <footer>
+    <p>© 2025 Seyoum Nigussie | AASTU | Portfolio</p>
+  </footer>
+
+  <script>
+    // SCRIPT TO SWITCH BETWEEN SECTIONS
+    function showSection(sectionId) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(sectionId).classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
